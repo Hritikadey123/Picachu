@@ -75,6 +75,12 @@
     color: rgba( 255,255,255,.2 );
 }
 
+@media screen and (max-width: 768px) {
+    .pokemon-image {
+        width: 100%;
+    }
+}
+
 @media screen and ( max-width: 500px )
 {
     :not( .details-view ) .card

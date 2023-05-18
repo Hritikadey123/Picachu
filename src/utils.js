@@ -51,15 +51,22 @@ export const normalizeEvolutionChain = ( evolution ) => {
  * @returns {string}
  */
 export const getImageURL = ( pokemonId ) => {
-	const baseURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other';
+	const baseURL = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail';
 
-	// Has only PNG.
-	if ( parseInt( pokemonId ) >= 650 ) {
-		return `${ baseURL }/official-artwork/${ pokemonId }.png`;
+	if ( pokemonId >= 100 ) {
+		return `${ baseURL }/${ pokemonId }.png`;
 	}
+	return `https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${ pokemonId }.svg`;
 
-	// Has SVG.
-	return `${ baseURL }/dream-world/${ pokemonId }.svg`;
+	// const baseURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other';
+
+	// // Has only PNG.
+	// if ( parseInt( pokemonId ) >= 650 ) {
+	// 	return `${ baseURL }/official-artwork/${ pokemonId }.png`;
+	// }
+
+	// // Has SVG.
+	// return `${ baseURL }/dream-world/${ pokemonId }.svg`;
 };
 
 /**
