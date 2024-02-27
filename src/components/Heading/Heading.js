@@ -7,7 +7,7 @@ export default function Heading() {
 				P<i></i>kédex
 			</h1>
 			<h4 className="info">
-				Made by Pratik Das
+				Made by Hritika Dey
 			</h4>
 		</>
 	);
